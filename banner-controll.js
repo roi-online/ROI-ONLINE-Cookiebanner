@@ -36,7 +36,7 @@ var bannerShowingDelayed = 0;
 
 var websiteLogo = "https://roi-online.dk/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2019/02/LOGO-768x337.jpg.webp";
 
-var logoWidth = "50px";
+var logoWidth = "100px";
 
 var darkModeEnable = true;
 

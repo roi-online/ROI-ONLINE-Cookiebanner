@@ -951,7 +951,7 @@ window.addEventListener("load", function() {
 						removeLoaderAndBlur();
 
 						if (!secondBannerEnable) {
-							showHide(false, true);
+							showHide(false, false);
 						} else {
 							showHide(false, true);
 							localStorage.setItem("secondBanner", true);

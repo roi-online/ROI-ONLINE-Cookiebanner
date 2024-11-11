@@ -49,12 +49,12 @@ var defaultConsent = false;
 
 var onClickAccept = "granted";
 var onClickCustom = "normal";
-var onClickDeclined = "denied";
+var onClickDeclined = "granted";
 
 var onClickAcceptSecond = "granted";
 var onClickDeclinedSecond = "denied";
 
-var secondBannerShowingTime = 10;
+var secondBannerShowingTime = 0;
 
 var storeQuery = true;
 var addBackToUrl = true;

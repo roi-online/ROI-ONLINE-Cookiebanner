@@ -44,17 +44,17 @@ var darkModeDefault = localStorage.getItem("viewMode") ? localStorage.getItem("v
 
 var showIconOfModes = true;
 
-var secondBannerEnable = false;
+var secondBannerEnable = true;
 var defaultConsent = false;
 
 var onClickAccept = "granted";
 var onClickCustom = "normal";
-var onClickDeclined = "granted";
+var onClickDeclined = "denied";
 
 var onClickAcceptSecond = "granted";
 var onClickDeclinedSecond = "denied";
 
-var secondBannerShowingTime = 0;
+var secondBannerShowingTime = 5;
 
 var storeQuery = true;
 var addBackToUrl = true;

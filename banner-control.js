@@ -38,7 +38,7 @@ var websiteLogo = "https://roi-online.dk/wp-content/webp-express/webp-images/doc
 
 var logoWidth = "100px";
 
-var darkModeEnable = true;
+var darkModeEnable = false;
 
 var darkModeDefault = localStorage.getItem("viewMode") ? localStorage.getItem("viewMode") : "light";
 

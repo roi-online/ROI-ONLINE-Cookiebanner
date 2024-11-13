@@ -997,7 +997,7 @@ window.addEventListener("load", function() {
 			function showSecondBanner() {
 				var secondBannerElement = `
                 <div class="doubleCheckPopUp">
-                    <h1 class="cookieHeadline">We noticed that you've declined to accept the use of cookies. While we respect your decision, please note that declining cookies may impact your browsing experience. Some website features, such as personalized content and certain functionalities, may not work as intended. To ensure you get the best experience, we recommend reviewing your decision. If you change your mind, you can always adjust your preferences in the settings or consent to cookies by accepting the banner again.</h1>
+                    <h1 class="cookieHeadline">Vi har bemærket, at du har valgt ikke at acceptere brugen af cookies. Selvom vi respekterer din beslutning, vil vi gerne gøre dig opmærksom på, at fravalget af cookies kan påvirke din browseroplevelse. Nogle funktioner på hjemmesiden, såsom personligt tilpasset indhold og visse funktionaliteter, fungerer muligvis ikke som forventet. For at sikre, at du får den bedste oplevelse, anbefaler vi, at du genovervejer din beslutning. Hvis du skifter mening, kan du altid justere dine præferencer i indstillingerne eller acceptere cookies ved at godkende banneret igen.</h1>
                     <div class="secondBannerBtnWrapper">
                         <button class="secondBannerBtn secondBannerAccept active">Accept</button>
                         <button class="secondBannerBtn secondBannerDeclined declined">Decline</button>

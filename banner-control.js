@@ -58,7 +58,7 @@ var secondBannerShowingTime = 5;
 
 var storeQuery = true;
 var addBackToUrl = true;
-var queryParamsToStore = ['gcild', 'utm_source', 'utm_medium'];
+var queryParamsToStore = ['gclid', 'utm_source', 'utm_medium'];
 
 const root = document.querySelector(':root');
 var rootStyle = getComputedStyle(root);

@@ -32,7 +32,7 @@ var categoryDescriptionsText = {
 
 var cookieInfoText = ["Expiration", "Domain", "Controller"];
 
-var bannerShowingDelayed = 0;
+var bannerShowingDelayed = 5;
 
 var websiteLogo = "https://www.gonnaorder.com/wp-content/uploads/2023/11/logo.svg";
 

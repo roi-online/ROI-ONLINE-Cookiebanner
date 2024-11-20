@@ -32,7 +32,7 @@ var categoryDescriptionsText = {
 
 var cookieInfoText = ["Expiration", "Domain", "Controller"];
 
-var bannerShowingDelayed = 5;
+var bannerShowingDelayed = 0;
 
 var websiteLogo = "https://www.gonnaorder.com/wp-content/uploads/2023/11/logo.svg";
 
@@ -54,7 +54,7 @@ var onClickDeclined = "denied";
 var onClickAcceptSecond = "granted";
 var onClickDeclinedSecond = "denied";
 
-var secondBannerShowingTime = 10;
+var secondBannerShowingTime = 4;
 
 var storeQuery = true;
 var addBackToUrl = true;

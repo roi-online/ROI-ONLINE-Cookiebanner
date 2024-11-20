@@ -49,7 +49,7 @@ var defaultConsent = false;
 
 var onClickAccept = "granted";
 var onClickCustom = "normal";
-var onClickDeclined = "granted";
+var onClickDeclined = "denied";
 
 var onClickAcceptSecond = "granted";
 var onClickDeclinedSecond = "denied";

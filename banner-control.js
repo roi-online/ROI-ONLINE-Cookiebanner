@@ -44,7 +44,7 @@ var darkModeDefault = localStorage.getItem("viewMode") ? localStorage.getItem("v
 
 var showIconOfModes = true;
 
-var secondBannerEnable = false;
+var secondBannerEnable = true;
 var defaultConsent = false;
 
 var onClickAccept = "granted";

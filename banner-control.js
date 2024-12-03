@@ -79,7 +79,7 @@ var consent = {
     functionality_storage: defaultConsent ? "granted" : 'denied',
     personalization_storage: defaultConsent ? "granted" : 'denied',
     unclassified_storage: defaultConsent ? "granted" : 'denied',
-    security_storage: defaultConsent ? "granted" : 'denied'  // New security_storage field
+    security_storage: defaultConsent ? "granted" : 'granted'  // New security_storage field
 }
 
 var acceptConsent = {

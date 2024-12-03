@@ -44,17 +44,17 @@ var darkModeDefault = localStorage.getItem("viewMode") ? localStorage.getItem("v
 
 var showIconOfModes = true;
 
-var secondBannerEnable = true;
+var secondBannerEnable = false;
 var defaultConsent = false;
 
 var onClickAccept = "granted";
 var onClickCustom = "normal";
-var onClickDeclined = "denied";
+var onClickDeclined = "granted";
 
 var onClickAcceptSecond = "granted";
 var onClickDeclinedSecond = "denied";
 
-var secondBannerShowingTime = 4;
+var secondBannerShowingTime = 10;
 
 var storeQuery = true;
 var addBackToUrl = true;
@@ -72,33 +72,36 @@ function gtag() {
 var consentValue = ["granted", "denied"];
 
 var consent = {
-	ad_storage: defaultConsent ? "granted" : 'denied',
-	ad_user_data: defaultConsent ? "granted" : 'denied',
-	ad_personalization: defaultConsent ? "granted" : 'denied',
-	analytics_storage: defaultConsent ? "granted" : 'denied',
-	functionality_storage: defaultConsent ? "granted" : 'denied',
-	personalization_storage: defaultConsent ? "granted" : 'denied',
-	unclassified_storage: defaultConsent ? "granted" : 'denied',
+    ad_storage: defaultConsent ? "granted" : 'denied',
+    ad_user_data: defaultConsent ? "granted" : 'denied',
+    ad_personalization: defaultConsent ? "granted" : 'denied',
+    analytics_storage: defaultConsent ? "granted" : 'denied',
+    functionality_storage: defaultConsent ? "granted" : 'denied',
+    personalization_storage: defaultConsent ? "granted" : 'denied',
+    unclassified_storage: defaultConsent ? "granted" : 'denied',
+    security_storage: defaultConsent ? "granted" : 'denied'  // New security_storage field
 }
 
 var acceptConsent = {
-	ad_storage: 'granted',
-	ad_user_data: 'granted',
-	ad_personalization: 'granted',
-	analytics_storage: 'granted',
-	functionality_storage: 'granted',
-	personalization_storage: 'granted',
-	unclassified_storage: 'granted',
+    ad_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'granted',
+    analytics_storage: 'granted',
+    functionality_storage: 'granted',
+    personalization_storage: 'granted',
+    unclassified_storage: 'granted',
+    security_storage: 'granted'  // New security_storage field
 }
 
 var declinedConsent = {
-	ad_storage: 'denied',
-	ad_user_data: 'denied',
-	ad_personalization: 'denied',
-	analytics_storage: 'denied',
-	functionality_storage: 'denied',
-	personalization_storage: 'denied',
-	unclassified_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied',
+    functionality_storage: 'denied',
+    personalization_storage: 'denied',
+    unclassified_storage: 'denied',
+    security_storage: 'granted'  // New security_storage field
 }
 
 gtag('consent', 'default', consent);
@@ -995,8 +998,6 @@ window.addEventListener("load", function() {
 
                     localStorage.setItem("bannerChoice", JSON.stringify(checkedCategories));
 
-                    console.log(checkedCategories)
-
 					choiceMade();
 
 					setTimeout(function() {
@@ -1100,6 +1101,8 @@ window.addEventListener("load", function() {
 					}
 
                     localStorage.setItem("bannerChoice", JSON.stringify(checkedCategories));
+					
+					choiceMade();
 
 					secondBanner.style.display = "none";
 					miniIcon.style.display = "flex";
@@ -1156,3 +1159,4 @@ window.addEventListener("load", function() {
 	processCookies(categoriesCookies, restCodes);
 
 });
+

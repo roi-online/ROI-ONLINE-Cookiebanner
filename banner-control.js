@@ -36,7 +36,7 @@ var bannerShowingDelayed = 0;
 
 var websiteLogo = "https://roi-online.dk/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2019/02/LOGO-768x337.jpg.webp";
 
-var logoWidth = "50px";
+var logoWidth = "200px";
 
 var darkModeEnable = true;
 
@@ -44,17 +44,17 @@ var darkModeDefault = localStorage.getItem("viewMode") ? localStorage.getItem("v
 
 var showIconOfModes = true;
 
-var secondBannerEnable = false;
+var secondBannerEnable = true;
 var defaultConsent = false;
 
 var onClickAccept = "granted";
 var onClickCustom = "normal";
-var onClickDeclined = "granted";
+var onClickDeclined = "denied";
 
 var onClickAcceptSecond = "granted";
 var onClickDeclinedSecond = "denied";
 
-var secondBannerShowingTime = 10;
+var secondBannerShowingTime = 20;
 
 var storeQuery = true;
 var addBackToUrl = true;

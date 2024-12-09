@@ -1072,27 +1072,90 @@ window.addEventListener("load", function() {
 				cookieBannerWrapper.style.display = "none";
 
 			document.querySelector(".secondBannerAccept").onclick = function() {
-    secondBanner.style.display = "none";
-    miniIcon.style.display = "flex";
+					secondBanner.style.display = "none";
+					if (onClickAcceptSecond == "denied") {
+                        
+                        Object.keys(consent).forEach(function(element) {
+                            consent[element] = consentValue[1]
+                        })
+    
+                        Object.keys(checkedCategories).forEach(function(element) {
+                            checkedCategories[element] = consentValue[1]
+                        });
 
-    if (onClickAcceptSecond == "granted") {
-        Object.keys(consent).forEach(function(element) {
-            consent[element] = consentValue[0];
-        });
-        Object.keys(checkedCategories).forEach(function(element) {
-            checkedCategories[element] = consentValue[0];
-        });
+						gtag('consent', 'update', declinedConsent);
+						pushDataLayer(declinedConsent, "consent_update");
+					} else if (onClickAcceptSecond == "granted") {
+						addStoredParamsToURL();
 
-        gtag('consent', 'update', acceptConsent);
-        pushDataLayer(acceptConsent, "consent_update");
-    }
+                        Object.keys(consent).forEach(function(element) {
+                            consent[element] = consentValue[0]
+                        })
+    
+                        Object.keys(checkedCategories).forEach(function(element) {
+                            checkedCategories[element] = consentValue[0]
+                        });
 
-    // Store the user's choice to prevent the banner from reappearing
-    localStorage.setItem("choiceMade", "true");
-    localStorage.setItem("bannerChoice", JSON.stringify(checkedCategories));
+						gtag('consent', 'update', acceptConsent);
+						pushDataLayer(acceptConsent, "consent_update");
+					}
 
-    // Remove second banner-related keys
-    localStorage.removeItem("secondBanner");
-    localStorage.removeItem("timeoutCompleted");
-    localStorage.removeItem("timeoutStartTimestamp");
-};
+                    localStorage.setItem("bannerChoice", JSON.stringify(checkedCategories));
+					
+					choiceMade();
+
+					secondBanner.style.display = "none";
+					miniIcon.style.display = "flex";
+					localStorage.removeItem("secondBanner");
+					localStorage.removeItem("timeoutCompleted");
+					localStorage.removeItem("timeoutStartTimestamp")
+					restCodes();
+				};
+
+				document.querySelector(".secondBannerDeclined").onclick = function() {
+					if (onClickDeclinedSecond == "denied") {
+                        
+                        Object.keys(consent).forEach(function(element) {
+                            consent[element] = consentValue[1]
+                        })
+    
+                        Object.keys(checkedCategories).forEach(function(element) {
+                            checkedCategories[element] = consentValue[1]
+                        });
+
+						gtag('consent', 'update', declinedConsent);
+						pushDataLayer(declinedConsent, "consent_update");
+					} else if (onClickDeclinedSecond == "granted") {
+
+						addStoredParamsToURL();
+                        
+                        Object.keys(consent).forEach(function(element) {
+                            consent[element] = consentValue[0]
+                        })
+    
+                        Object.keys(checkedCategories).forEach(function(element) {
+                            checkedCategories[element] = consentValue[0]
+                        });
+
+						gtag('consent', 'update', acceptConsent);
+						pushDataLayer(acceptConsent, "consent_update");
+					}
+
+                    localStorage.setItem("bannerChoice", JSON.stringify(checkedCategories));
+
+					secondBanner.style.display = "none";
+					miniIcon.style.display = "flex";
+					localStorage.removeItem("secondBanner");
+					localStorage.removeItem("timeoutCompleted");
+					localStorage.removeItem("timeoutStartTimestamp")
+					restCodes();
+				};
+
+				localStorage.setItem("timeoutCompleted", "true");
+			}
+		}
+	}
+
+	processCookies(categoriesCookies, restCodes);
+
+});

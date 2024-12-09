@@ -1008,7 +1008,7 @@ window.addEventListener("load", function() {
 							showHide(false, true);
 						} else {
 							showHide(false, true);
-							localStorage.setItem("secondBanner", true);
+							localStorage.setItem("secondBanner", false);
 							secondBanner()
 						}
 

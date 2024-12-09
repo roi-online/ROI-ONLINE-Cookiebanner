@@ -1071,7 +1071,7 @@ window.addEventListener("load", function() {
 				var cookieBannerWrapper = document.querySelector(".cookieBannerWrapper");
 				cookieBannerWrapper.style.display = "none";
 
-			document.querySelector(".secondBannerAccept").onclick = function() {
+				document.querySelector(".secondBannerAccept").onclick = function() {
 					secondBanner.style.display = "none";
 					if (onClickAcceptSecond == "denied") {
                         

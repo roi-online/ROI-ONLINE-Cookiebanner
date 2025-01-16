@@ -1102,7 +1102,6 @@ window.addEventListener("load", function() {
 
                     localStorage.setItem("bannerChoice", JSON.stringify(checkedCategories));
 					
-					choiceMade();
 
 					secondBanner.style.display = "none";
 					miniIcon.style.display = "flex";
